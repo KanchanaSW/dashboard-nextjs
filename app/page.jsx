@@ -8,6 +8,7 @@ import LoadingPage from "./loading";
 export default function Home() {
   const [shipmentProgressData,setShipmentProgressData] = useState([]);
   const [shipmentTableData,setShipmentTableData] = useState([]);
+  const [outgoingShipmentsData,setOutgoingShipmentsData] = useState([]);
   const [loading,setLoading] =useState(true);
 
   useEffect(() =>{
@@ -32,6 +33,17 @@ export default function Home() {
     fetchShipmentTableData();
   },[]);
 
+  useEffect(() =>{
+    const fetchOutgoingShipmentsData = async () => {
+      const res = await fetch('/api/outgoingShipments');
+      const data =await res.json();
+      setOutgoingShipmentsData(data);
+      setLoading(false);
+    }
+
+    fetchOutgoingShipmentsData();
+  },[]);
+
   if(loading){
     return <LoadingPage />
   }
@@ -42,7 +54,7 @@ export default function Home() {
 
       <div className="grid grid-cols-5 gap-4">
   <div className="col-span-4"> 
-    <OutgoingShipmentChart />
+    <OutgoingShipmentChart data={outgoingShipmentsData}/>
     
     </div>
 
