@@ -103,7 +103,7 @@ const ShipmentTable = ({ dataSource }) => {
   const [selectionType, setSelectionType] = useState("checkbox");
 
   return (
-    <div className="p-4">
+    <div className="">
       <Card>
         <div className="flex justify-between items-center pb-5">
           <p className="">Last Shipment</p>

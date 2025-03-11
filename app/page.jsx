@@ -49,13 +49,16 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <OutgoingShipmentChart data={outgoingShipmentsData} />
-
-      <div className="p-4 grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-5 grid-rows-5 gap-4 p-4">
+      <div className="col-span-4">
+        <OutgoingShipmentChart data={outgoingShipmentsData} />
+      </div>
+      <div className="col-start-5">
         <ShipmentProgressCard shipmentProgressData={shipmentProgressData} />
       </div>
-      <ShipmentTable dataSource={shipmentTableData} />
+      <div className="col-span-5 row-start-2">
+        <ShipmentTable dataSource={shipmentTableData} />
+      </div>
     </div>
   );
 }

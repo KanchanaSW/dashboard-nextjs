@@ -30,7 +30,7 @@ const OutgoingShipmentChart = ({ data }) => {
     yField: "value",
     seriesField: "type",
     smooth: true,
-
+    height: 371,
     legend: false,
     tooltip: {
       showMarkers: false,
@@ -67,7 +67,7 @@ const OutgoingShipmentChart = ({ data }) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="">
       <div className="flex ">
         <Card className=" w-full ">
           <p className="ml-2 text-base font-semibold">Out Going Shipments</p>
