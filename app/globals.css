@@ -37,3 +37,12 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+
+.sync-button {
+  padding: 0.5rem 0.7rem;
+  background-color: var(--primary-color);
+  color: #000;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -30,7 +30,7 @@ const OutgoingShipmentChart = ({ data }) => {
     yField: "value",
     seriesField: "type",
     smooth: true,
-    height: 385,
+    height: 377,
     legend: false,
     tooltip: {
       showMarkers: false,

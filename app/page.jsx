@@ -12,6 +12,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
+import HeaderBreadCrumbCard from "./components/HeaderBreadcrumbCard";
 const { Header, Content, Footer, Sider } = Layout;
 
 function getItem(label, key, icon, children) {
@@ -123,18 +124,23 @@ export default function Home() {
             margin: "0 16px",
           }}
         >
-          <Breadcrumb
+          {/* <Breadcrumb
             style={{
               margin: "16px 0",
             }}
             items={[{ title: "User" }, { title: "Home" }]}
-          />
+          /> */}
 
           <div
             style={{
               minHeight: "100vh",
             }}
           >
+            <div  className="my-2">
+              <HeaderBreadCrumbCard />
+
+            </div>
+             
             <div className="grid grid-cols-5 grid-rows-5 gap-4">
               <div className="col-span-4">
                 <OutgoingShipmentChart data={outgoingShipmentsData} />
