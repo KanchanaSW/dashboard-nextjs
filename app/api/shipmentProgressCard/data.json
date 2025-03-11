@@ -1,34 +1,34 @@
 [
-    {
-        "id": 1111,
-        "title": "Labels",
-        "subtitle": "Printed",
-        "count": "1,000",
-        "progressPercentage": 30,
-        "color": "#1677FF"
-      },
-      {
-        "id": 1112,
-        "title": "Shipments",
-        "subtitle": "Not Scanned",
-        "count": "10%",
-        "progressPercentage": 90,
-        "color": "#FA8C16"
-      },
-      {
-        "id": 1113,
-        "title": "Shipments",
-        "subtitle": "En Route",
-        "count": "30%",
-        "progressPercentage": 60,
-        "color": "#52C41A"
-      },
-      {
-        "id": 1114,
-        "title": "Shipments",
-        "subtitle": "Delivered",
-        "count": "60%",
-        "progressPercentage": 60,
-        "color": "#F5222D"
-      }
+  {
+    "id": 1111,
+    "title": "Labels",
+    "subtitle": "Printed",
+    "count": "1,000",
+    "progressPercentage": 30,
+    "color": "#1677FF"
+  },
+  {
+    "id": 1112,
+    "title": "Shipments",
+    "subtitle": "Not Scanned",
+    "count": "10%",
+    "progressPercentage": 90,
+    "color": "#FA8C16"
+  },
+  {
+    "id": 1113,
+    "title": "Shipments",
+    "subtitle": "En Route",
+    "count": "30%",
+    "progressPercentage": 60,
+    "color": "#52C41A"
+  },
+  {
+    "id": 1114,
+    "title": "Shipments",
+    "subtitle": "Delivered",
+    "count": "60%",
+    "progressPercentage": 60,
+    "color": "#F5222D"
+  }
 ]
