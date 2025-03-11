@@ -1,52 +1,10 @@
 "use client"
 import React, { useState } from 'react';
 import {  Table, Tag,Card } from 'antd';
-import { SortAscendingOutlined, FilterOutlined, SearchOutlined } from "@ant-design/icons";
+import {  FilterOutlined, SearchOutlined } from "@ant-design/icons";
 import Image from 'next/image';
 import DHLImage from '../../public/dhlImage.svg';
 
-const dataSource = [
-  {
-    key: "1",
-    reference: "#12345",
-    status: "Shipped",
-    tag: "Bulk 123",
-    date: "04-10-2024, 10:30",
-    carrier: "DHL",
-    shippingMethod: "Domestic Shipping",
-    trackingUrl: "32165423",
-  },
-  {
-    key: "2",
-    reference: "#12345",
-    status: "Delivered",
-    tag: "Bulk 123",
-    date: "04-10-2024, 10:30",
-    carrier: "DHL",
-    shippingMethod: "Domestic Shipping",
-    trackingUrl: "32165423",
-  },
-  {
-    key: "3",
-    reference: "#12345",
-    status: "Not Shipped",
-    tag: "Bulk 123",
-    date: "04-10-2024, 10:30",
-    carrier: "DHL",
-    shippingMethod: "Domestic Shipping",
-    trackingUrl: "32165423",
-  },
-  {
-    key: "4",
-    reference: "#12345",
-    status: "Shipped",
-    tag: "Bulk 123",
-    date: "04-10-2024, 10:30",
-    carrier: "DHL",
-    shippingMethod: "Domestic Shipping",
-    trackingUrl: "32165423",
-  },
-];
 
 const statusColors = {
   Shipped: "green",
@@ -138,7 +96,7 @@ const rowSelection = {
     }),
   };
 
-const ShipmentTable = () => {
+const ShipmentTable = ({dataSource}) => {
     const [selectionType, setSelectionType] = useState('checkbox');
 
     return (
