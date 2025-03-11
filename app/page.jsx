@@ -2,6 +2,7 @@
 import { useEffect,useState } from "react";
 import ShipmentTable from "./components/ShipmentsTable";
 import ShipmentProgressCard from "./components/ShipmentProgressCard";
+import OutgoingShipmentChart from "./components/OutgoingShipmentsChart";
 import LoadingPage from "./loading";
 
 export default function Home() {
@@ -40,7 +41,10 @@ export default function Home() {
     <div>
 
       <div className="grid grid-cols-5 gap-4">
-  <div className="col-span-4"> <ShipmentTable dataSource={shipmentTableData}/></div>
+  <div className="col-span-4"> 
+    <OutgoingShipmentChart />
+    
+    </div>
 
 
   <div className="p-4">
@@ -49,6 +53,9 @@ export default function Home() {
   </div>
  
 </div>
+
+    <ShipmentTable dataSource={shipmentTableData}/>
+
 
       
     </div>
