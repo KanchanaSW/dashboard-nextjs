@@ -51,22 +51,14 @@ export default function Home() {
 
   return (
     <div>
-
-      <div className="grid grid-cols-5 gap-4">
-  <div className="col-span-4"> 
     <OutgoingShipmentChart data={outgoingShipmentsData}/>
-    
-    </div>
 
-
-  <div className="p-4">
+  <div className="p-4 grid grid-cols-3 gap-4" >
   <ShipmentProgressCard shipmentProgressData={shipmentProgressData}/>
-  
   </div>
- 
-</div>
-
     <ShipmentTable dataSource={shipmentTableData}/>
+  
+
 
 
       

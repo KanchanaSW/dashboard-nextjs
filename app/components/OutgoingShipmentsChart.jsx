@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "@ant-design/charts";
-import { Card } from "antd";
+import { Card,Divider,TimePicker } from "antd";
 
 
 
@@ -72,9 +72,21 @@ const lastPoints = data.reduce((acc, curr) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <Card className="p-4 w-full max-w-4xl shadow-lg">
-   
+    <div className="p-4" >
+         <div className="flex ">
+      <Card className=" w-full ">
+        <p className="ml-2 text-base font-semibold">Out Going Shipments</p>
+        <Divider />
+        <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center">
+                <p className="ml-4 mr-14 text-sm">Daily</p>
+                <p className="text-[#1677FF] text-sm">Hourly</p>
+            </div>
+            <div>
+                 <TimePicker.RangePicker  />
+            </div>
+        </div>
+        <Divider />
         <Line {...config} />
         <div className="flex justify-center space-x-4 mt-4">
           <span className="flex items-center">
@@ -88,6 +100,7 @@ const lastPoints = data.reduce((acc, curr) => {
           </span>
         </div>
       </Card>
+    </div>
     </div>
   );
 };
