@@ -68,7 +68,7 @@ export default function Home() {
 
         <Content
           style={{
-            marginTop: 70,
+            // marginTop: 70,
             marginLeft: 16,
             marginRight: 16,
           }}

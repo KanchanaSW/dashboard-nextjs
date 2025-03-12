@@ -108,8 +108,8 @@ const ShipmentTable = ({ dataSource }) => {
   const [selectionType, setSelectionType] = useState("checkbox");
 
   return (
-    <div className="">
-      <Card>
+    <div >
+      <Card >
         <div className="flex justify-between items-center pb-5">
           <p className="text-base font-semibold text-[#000]">Last Shipment</p>
           <button className="view-all-btn" type="submit">
@@ -118,6 +118,9 @@ const ShipmentTable = ({ dataSource }) => {
         </div>
         <Table
           bordered
+          scroll={{
+            x: 400,
+          }}
           rowSelection={{
             type: selectionType,
             ...rowSelection,

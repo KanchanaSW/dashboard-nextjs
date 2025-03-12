@@ -7,7 +7,7 @@ const HeaderBreadCrumbCard = () => {
     <Card className="p-0 m-0">
       <div>
         <Breadcrumb
-          className="sm:visible sm:opacity-100 opacity-0 invisible"
+          className=""
           items={[
             { title: "Home", className: "text-sm text-[#8C8C8C]" },
             { title: "Carrier", className: "text-sm text-[#8C8C8C]" },

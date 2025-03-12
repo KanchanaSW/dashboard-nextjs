@@ -36,11 +36,14 @@ const menuProps = {
 const HeaderComponent = () => {
   return (
     <Header
-      className="bg-blue-500 text-white text-lg font-bold fixed top-0 w-full z-50 -ml-20"
+    className="hidden sm:block sm:opacity-100 opacity-0" 
       style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 50,
+        width: '100%',
         padding: 0,
         backgroundColor: "#fff",
-        marginRight: 30,
       }}
     >
       <div className="flex items-center justify-end px-6 shadow-md">

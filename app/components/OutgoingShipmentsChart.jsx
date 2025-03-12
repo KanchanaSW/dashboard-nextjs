@@ -82,7 +82,11 @@ const OutgoingShipmentChart = ({ data }) => {
             </div>
           </div>
           <Divider />
-          <Line {...config} />
+          <div className="overflow-x-auto">
+            <div style={{ minWidth: "400px" }}>
+              <Line {...config} />
+            </div>
+          </div>
           <div className="flex justify-center space-x-4 mt-4">
             <span className="flex items-center">
               <span className="w-3 h-3 bg-[#AA20B9] rounded-full inline-block mr-2"></span>{" "}
