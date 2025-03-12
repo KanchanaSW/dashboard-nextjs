@@ -6,14 +6,16 @@ import {
   FileOutlined,
   PieChartOutlined,
   TeamOutlined,
+  UploadOutlined,
   UserOutlined,
+  VideoCameraOutlined,
 } from "@ant-design/icons";
 import LogoImage from "../../public/logoBlue.svg";
 import Image from "next/image";
 const { Sider } = Layout;
 
 const siderStyle = {
-  overflow: "auto", // Keeps scroll functionality
+  // overflow: "auto", // Keeps scroll functionality
   height: "100vh",
   position: "sticky",
   insetInlineStart: 0,
@@ -24,45 +26,24 @@ const siderStyle = {
   background: "#fff",
 };
 
-function getItem(label, key, icon, children) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  };
-}
 
-const items = [
-  getItem("Option 1", "1", <PieChartOutlined />),
-  getItem("Option 2", "2", <DesktopOutlined />),
-  getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3"),
-    getItem("Bill", "4"),
-    getItem("Alex", "5"),
-  ]),
-  getItem("Team", "sub2", <TeamOutlined />, [
-    getItem("Team 1", "6"),
-    getItem("Team 2", "8"),
-  ]),
-  getItem("Files", "9", <FileOutlined />),
-];
-
-const items2 = [
-  getItem("Option 1", "1", <PieChartOutlined />),
-  getItem("Option 2", "2", <DesktopOutlined />),
-];
 
 const SliderComponent = () => {
   const [collapsed, setCollapsed] = useState(true);
 
   return (
     <Sider
-      className="sticky top-0 z-100"
-      style={siderStyle}
-      collapsible
-      collapsed={collapsed}
-      onCollapse={(value) => setCollapsed(value)}
+        className="sticky top-0 z-100"
+        style={siderStyle}
+        width={75}
+        breakpoint="lg"
+        collapsedWidth="0"
+        onBreakpoint={(broken) => {
+          console.log(broken);
+        }}
+        onCollapse={(collapsed, type) => {
+          console.log(collapsed, type);
+        }}
     >
       <div className="demo-logo-vertical" />
 
@@ -78,7 +59,23 @@ const SliderComponent = () => {
           theme="light"
           defaultSelectedKeys={["1"]}
           mode="inline"
-          items={items}
+          items={[
+            {
+              key: '1',
+              icon: <UserOutlined />,
+              label: '',
+            },
+            {
+              key: '2',
+              icon: <VideoCameraOutlined />,
+              label: '',
+            },
+            {
+              key: '3',
+              icon: <UploadOutlined />,
+              label: '',
+            },
+          ]}
         />
 
         <Menu
@@ -89,7 +86,18 @@ const SliderComponent = () => {
           theme="light"
           defaultSelectedKeys={["1"]}
           mode="inline"
-          items={items2}
+          items={[
+            {
+              key: '4',
+              icon: <UserOutlined />,
+              label: '',
+            },
+            {
+              key: '5',
+              icon: <VideoCameraOutlined />,
+              label: '',
+            },
+          ]}
         />
       </div>
     </Sider>
