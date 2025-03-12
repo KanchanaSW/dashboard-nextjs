@@ -44,14 +44,14 @@ const HeaderComponent = () => {
       }}
     >
       <div className="flex items-center justify-end px-6 shadow-md">
-        <div className="flex flex-col items-start px-6 pb-3 w-[162]">
+        <div className="flex flex-col items-start px-6 pb-3 w-[162] sm:visible sm:opacity-100 opacity-0 invisible">
           <span className="text-gray-700 font-semibold text-xs  mt-3">
             4,934 Credits Left
           </span>
           <Progress percent={40} showInfo={false} />
         </div>
 
-        <div className="mr-6">
+        <div className="mr-6 sm:visible sm:opacity-100 opacity-0 invisible">
           <Dropdown className="dropdown-btn text-sm" menu={menuProps}>
             <Button>
               <DownOutlined size={12} />

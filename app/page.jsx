@@ -79,19 +79,18 @@ export default function Home() {
               <HeaderBreadCrumbCard />
             </div>
 
-            <div className="grid grid-cols-5 grid-rows-5 gap-4">
-              <div className="col-span-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-5 gap-4">
+              <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4">
                 <OutgoingShipmentChart data={outgoingShipmentsData} />
               </div>
-              <div className="col-start-5">
-                <ShipmentProgressCard
-                  shipmentProgressData={shipmentProgressData}
-                />
+              <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1">
+                <ShipmentProgressCard shipmentProgressData={shipmentProgressData} />
               </div>
-              <div className="col-span-5 row-start-2">
+              <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-5 row-start-2">
                 <ShipmentTable dataSource={shipmentTableData} />
               </div>
             </div>
+
           </div>
         </Content>
       </Layout>
