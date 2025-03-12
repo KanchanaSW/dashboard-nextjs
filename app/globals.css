@@ -55,3 +55,22 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+.notification-badge{
+   font-size: small;
+}
+.notification-btn{
+  padding: 0.55rem;
+  background-color: var(--primary-color);
+  color: #000;
+  border: 1px solid gray;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dropdown-btn{
+  /* padding: 0.3rem 1rem; */
+  border: 1px solid gray;
+  
+}
+.avater{
+  padding: 1.1rem;
+}

@@ -5,10 +5,11 @@ import ShipmentProgressCard from "./components/ShipmentProgressCard";
 import OutgoingShipmentChart from "./components/OutgoingShipmentsChart";
 import LoadingPage from "./loading";
 
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Layout } from "antd";
 import HeaderBreadCrumbCard from "./components/HeaderBreadcrumbCard";
 import SliderComponent from "./components/SliderComponent";
-const { Header, Content, Footer, Sider } = Layout;
+import HeaderComponent from "./components/HeaderComponent";
+const { Content } = Layout;
 
 
 export default function Home() {
@@ -17,9 +18,6 @@ export default function Home() {
   const [outgoingShipmentsData, setOutgoingShipmentsData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
 
   useEffect(() => {
     const fetchShipmentProgressData = async () => {
@@ -63,19 +61,16 @@ export default function Home() {
     <Layout
       style={{
         minHeight: "100vh",
-        background: colorBgContainer,
+        background: "#fff",
       }}
     >
       
       <SliderComponent />
 
       <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer,
-          }}
-        />
+        
+        <HeaderComponent />
+
         <Content
           style={{
             margin: "0 16px",

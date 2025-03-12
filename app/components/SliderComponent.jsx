@@ -1,6 +1,6 @@
 'use client'
 import React,{useState} from "react";
-import {Menu, theme,Layout } from "antd";
+import {Menu, Layout } from "antd";
 import {
     DesktopOutlined,
     FileOutlined,
@@ -41,18 +41,15 @@ const SliderComponent = () => {
 
     const [collapsed, setCollapsed] = useState(true);
 
-    const {
-        token: { colorBgContainer, borderRadiusLG },
-      } = theme.useToken();
+    
 
   return (
     <Sider
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
-        className="bg-white"
         style={{
-          background: colorBgContainer,
+          background: "#fff",
         }}
       >
         <div className="demo-logo-vertical" />
