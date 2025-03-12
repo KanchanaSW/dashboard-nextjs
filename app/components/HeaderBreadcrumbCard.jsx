@@ -13,7 +13,7 @@ const HeaderBreadCrumbCard = () => {
           />
 
           <div className="flex justify-between items-center mt-1 -mb-2">
-            <p className="text-xl text-[141414] text-semibold">Carrier Dashboard</p>
+            <p className="text-xl text-[141414] font-semibold">Carrier Dashboard</p>
 
             <div className="flex justify-between items-center">
                 <p className="mr-3 text-sm">Last Synced: <b>5mins ago</b></p>

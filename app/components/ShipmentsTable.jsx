@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Table, Tag, Card } from "antd";
+import { Table, Tag, Card, Badge } from "antd";
 import { FilterOutlined, SearchOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import DHLImage from "../../public/dhlImage.svg";
@@ -67,6 +67,11 @@ const columns = [
     ),
     dataIndex: "shippingMethod",
     key: "shippingMethod",
+    render: (shippingMethod) => (
+      <p>
+       <Badge color="#52C41A" /> {shippingMethod}
+      </p>
+    ),
   },
   {
     title: (
@@ -106,7 +111,7 @@ const ShipmentTable = ({ dataSource }) => {
     <div className="">
       <Card>
         <div className="flex justify-between items-center pb-5">
-          <p className="text-base text-semibold text-[#000]">Last Shipment</p>
+          <p className="text-base font-semibold text-[#000]">Last Shipment</p>
           <button className="view-all-btn" type="submit">
             View all
           </button>
