@@ -11,13 +11,11 @@ import SliderComponent from "./components/SliderComponent";
 import HeaderComponent from "./components/HeaderComponent";
 const { Content } = Layout;
 
-
 export default function Home() {
   const [shipmentProgressData, setShipmentProgressData] = useState([]);
   const [shipmentTableData, setShipmentTableData] = useState([]);
   const [outgoingShipmentsData, setOutgoingShipmentsData] = useState([]);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     const fetchShipmentProgressData = async () => {
@@ -57,37 +55,30 @@ export default function Home() {
   }
 
   return (
-
     <Layout
       style={{
         minHeight: "100vh",
         background: "#fff",
       }}
     >
-      
       <SliderComponent />
 
       <Layout>
-        
         <HeaderComponent />
 
         <Content
           style={{
             marginTop: 70,
             marginLeft: 16,
-            marginRight: 16
+            marginRight: 16,
           }}
         >
           <div
-            // style={{
-            //   minHeight: "100vh",
-            // }}
           >
-            <div  className="my-2">
+            <div className="my-2">
               <HeaderBreadCrumbCard />
-
             </div>
-             
+
             <div className="grid grid-cols-5 grid-rows-5 gap-4">
               <div className="col-span-4">
                 <OutgoingShipmentChart data={outgoingShipmentsData} />
