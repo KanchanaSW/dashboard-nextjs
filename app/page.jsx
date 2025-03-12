@@ -73,13 +73,15 @@ export default function Home() {
 
         <Content
           style={{
-            margin: "0 16px",
+            marginTop: 70,
+            marginLeft: 16,
+            marginRight: 16
           }}
         >
           <div
-            style={{
-              minHeight: "100vh",
-            }}
+            // style={{
+            //   minHeight: "100vh",
+            // }}
           >
             <div  className="my-2">
               <HeaderBreadCrumbCard />
