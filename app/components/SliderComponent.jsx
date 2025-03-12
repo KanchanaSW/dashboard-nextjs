@@ -1,11 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Menu, Layout } from "antd";
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
@@ -15,21 +11,19 @@ import Image from "next/image";
 const { Sider } = Layout;
 
 const siderStyle = {
-  // overflow: "auto", // Keeps scroll functionality
   height: "100vh",
   position: "sticky",
   insetInlineStart: 0,
   top: 0,
   bottom: 0,
-  scrollbarWidth: "none", // Hides scrollbar in Firefox
-  scrollbarColor: "transparent transparent", // Transparent scroll thumb and track
+  scrollbarWidth: "none", 
+  scrollbarColor: "transparent transparent",
   background: "#fff",
 };
 
 
 
 const SliderComponent = () => {
-  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <Sider

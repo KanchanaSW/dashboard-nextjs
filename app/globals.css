@@ -87,7 +87,8 @@ body {
   transition: all 0.2s;
 }
 
-:where(.css-dev-only-do-not-override-240cud).ant-layout-sider .ant-layout-sider-zero-width-trigger {
+.ant-layout-sider .ant-layout-sider-zero-width-trigger
+{
   position: absolute;
   top: 124px;
   inset-inline-end: -40px;
@@ -104,4 +105,7 @@ body {
   border: grey solid 1px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+canvas {
+  touch-action: pan-x !important;
 }
