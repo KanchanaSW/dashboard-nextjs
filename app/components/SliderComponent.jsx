@@ -74,7 +74,7 @@ const SliderComponent = () => {
         <Image src={LogoImage} alt="BlueLogo" className="w-[50] h-8" />
         </div>
 
-        <div className="h-screen flex flex-wrap content-between">
+        <div className="h-[calc(100vh-8rem)] flex flex-wrap content-between">
         <Menu
           style={{
             background: 'transparent'
