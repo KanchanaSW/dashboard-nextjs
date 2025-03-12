@@ -4,47 +4,18 @@ import ShipmentTable from "./components/ShipmentsTable";
 import ShipmentProgressCard from "./components/ShipmentProgressCard";
 import OutgoingShipmentChart from "./components/OutgoingShipmentsChart";
 import LoadingPage from "./loading";
-import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import HeaderBreadCrumbCard from "./components/HeaderBreadcrumbCard";
+import SliderComponent from "./components/SliderComponent";
 const { Header, Content, Footer, Sider } = Layout;
 
-function getItem(label, key, icon, children) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  };
-}
-const items = [
-  getItem("Option 1", "1", <PieChartOutlined />),
-  getItem("Option 2", "2", <DesktopOutlined />),
-  getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3"),
-    getItem("Bill", "4"),
-    getItem("Alex", "5"),
-  ]),
-  getItem("Team", "sub2", <TeamOutlined />, [
-    getItem("Team 1", "6"),
-    getItem("Team 2", "8"),
-  ]),
-  getItem("Files", "9", <FileOutlined />),
-];
 
 export default function Home() {
   const [shipmentProgressData, setShipmentProgressData] = useState([]);
   const [shipmentTableData, setShipmentTableData] = useState([]);
   const [outgoingShipmentsData, setOutgoingShipmentsData] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const [collapsed, setCollapsed] = useState(true);
 
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -95,23 +66,9 @@ export default function Home() {
         background: colorBgContainer,
       }}
     >
-      <Sider
-        collapsible
-        collapsed={collapsed}
-        onCollapse={(value) => setCollapsed(value)}
-        className="bg-white"
-        style={{
-          background: colorBgContainer,
-        }}
-      >
-        <div className="demo-logo-vertical" />
-        <Menu
-          theme="light"
-          defaultSelectedKeys={["1"]}
-          mode="inline"
-          items={items}
-        />
-      </Sider>
+      
+      <SliderComponent />
+
       <Layout>
         <Header
           style={{
@@ -124,13 +81,6 @@ export default function Home() {
             margin: "0 16px",
           }}
         >
-          {/* <Breadcrumb
-            style={{
-              margin: "16px 0",
-            }}
-            items={[{ title: "User" }, { title: "Home" }]}
-          /> */}
-
           <div
             style={{
               minHeight: "100vh",

@@ -106,8 +106,8 @@ const ShipmentTable = ({ dataSource }) => {
     <div className="">
       <Card>
         <div className="flex justify-between items-center pb-5">
-          <p className="">Last Shipment</p>
-          <button className="btn" type="submit">
+          <p className="text-base text-semibold text-[#000]">Last Shipment</p>
+          <button className="view-all-btn" type="submit">
             View all
           </button>
         </div>

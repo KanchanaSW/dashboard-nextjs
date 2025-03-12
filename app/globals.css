@@ -46,3 +46,12 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.view-all-btn{
+  padding: 0.33rem 1rem;
+  background-color: var(--primary-color);
+  color: #000;
+  border: 1px solid gray;
+  border-radius: 6px;
+  cursor: pointer;
+}
