@@ -78,7 +78,7 @@ const OutgoingShipmentChart = ({ data }) => {
               <p className="text-[#1677FF] text-sm">Hourly</p>
             </div>
             <div>
-              <TimePicker.RangePicker />
+              <TimePicker.RangePicker className="sm:visible sm:opacity-100 opacity-0 invisible"/>
             </div>
           </div>
           <Divider />
