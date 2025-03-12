@@ -74,3 +74,15 @@ body {
 .avater{
   padding: 1.1rem;
 }
+:where(.css-240cud).ant-layout-sider .ant-layout-sider-trigger {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: 48px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
